@@ -1,7 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
-export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+
+export const supabase = createClient(
+  'https://irbdofrvlkkwcxwgwzqm.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlyYmRvZnJ2bGtrd2N4d2d3enFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzMTI2MzksImV4cCI6MjA5NTg4ODYzOX0.VRdmZlHibuAIVhdVSObHUSN3Q7z1gomrhqPNprf7AZc'
+)
 
 export const mapInvoice = row => ({
   id: row.id, companyId: row.company_id,
